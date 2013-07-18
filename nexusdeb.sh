@@ -28,7 +28,7 @@ wget http://www.sonatype.org/downloads/nexus-${1}.war
 mkdir nexus-${1}
 unzip nexus-${1}.war -d nexus-${1}
 rm nexus-${1}.war
-echo '<Context path="/nexus" docBase="/usr/share/nexus/nexus-2.0.5"/>' > nexus-${1}/nexus.xml
+echo '<Context path="/nexus" docBase="/usr/share/nexus/nexus-${1}"/>' > nexus-${1}/nexus.xml
 tar -czf nexus_${1}.orig.tar.gz nexus-${1}
 cd nexus-${1}
 
